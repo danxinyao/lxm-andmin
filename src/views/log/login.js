@@ -30,6 +30,9 @@ export default {
             checked: true
         }
     },
+    mounted() {
+        this.handleSubmit()
+    },
     methods: {
         ...mapActions([
             'setAuth'

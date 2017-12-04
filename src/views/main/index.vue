@@ -27,7 +27,7 @@
                 <strong class="title">
                     {{ $route.name }}
                 </strong>
-                <transition name="el-fade-in-linear">
+                <transition name="fade">
                     <router-view></router-view>
                 </transition>
             </el-main>
@@ -58,6 +58,20 @@
         color: #657385;
         font-size: 26px;
         margin-bottom: 10px;
+    }
+    .fade-enter-active {
+        animation: fade-in .5s linear;
+    }
+    .fade-leave-active {
+        opacity: 0;
+    }
+    @keyframes fade-in {
+        0% { opacity: 0 }
+        100% { opacity: 1 }
+    }
+    @keyframes fade-out {
+        0% { opacity: 0 }
+        100% { opacity: 1 }
     }
 </style>
 <script type="text/babel">

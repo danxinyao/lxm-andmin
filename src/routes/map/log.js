@@ -1,4 +1,4 @@
-const Login = resolve => require(['views/log/login.vue'], resolve) // 登录
+const Login = () => import('views/log/login.vue') // 登录
 
 export default [
     {
